@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { ArrowDown, Download, Mail, Github, Linkedin, MapPin } from 'lucide-react';
+import { ArrowDown, Download, Mail, Github, Linkedin, MapPin, BookOpen } from 'lucide-react';
+
+const roles = ['Full-Stack Developer', 'Software Engineer', 'UI/UX Designer', 'Mentor'];
 
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState('');
-  const roles = ['Full Stack Developer', 'Software Engineer', 'UI/UX Enthusiast', 'DevSecOps Advocate'];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -74,24 +75,24 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-dark-400 mb-8 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: '0.4s' }}>
-            A passionate software engineering student at College of Science and Technology with 4 years of experience
-            crafting innovative solutions. Specializing in full-stack development, cybersecurity, and creating
-            exceptional user experiences.
+            4th-year Software Engineering student at College of Science and Technology, Royal University of Bhutan.
+            Building full-stack products — from Bhutan's first digital rental marketplace to real-time mobile apps —
+            and mentoring the next generation of engineers.
           </p>
 
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-6 mb-10 animate-fade-up" style={{ animationDelay: '0.6s' }}>
             <div className="bg-dark-900/50 backdrop-blur-sm border border-dark-800 rounded-lg px-6 py-3">
               <div className="text-3xl font-bold gradient-text">4+</div>
-              <div className="text-sm text-dark-400">Years Experience</div>
+              <div className="text-sm text-dark-400">Projects Built</div>
             </div>
             <div className="bg-dark-900/50 backdrop-blur-sm border border-dark-800 rounded-lg px-6 py-3">
               <div className="text-3xl font-bold gradient-text">10+</div>
-              <div className="text-sm text-dark-400">Projects Completed</div>
+              <div className="text-sm text-dark-400">Technologies</div>
             </div>
             <div className="bg-dark-900/50 backdrop-blur-sm border border-dark-800 rounded-lg px-6 py-3">
-              <div className="text-3xl font-bold gradient-text">5+</div>
-              <div className="text-sm text-dark-400">Technologies</div>
+              <div className="text-3xl font-bold gradient-text">2×</div>
+              <div className="text-sm text-dark-400">Internship + Mentor</div>
             </div>
           </div>
 
@@ -111,13 +112,13 @@ const Hero = () => {
               <span>Get In Touch</span>
             </button>
             <a
-              href="#" // UPDATE: Add resume PDF link
-              download
+              href="/Kanisha_Pradhan_CV.html"
+              download="Kanisha_Pradhan_CV.html"
               className="btn-secondary flex items-center space-x-2"
-              title="Download Resume"
+              title="Download CV"
             >
               <Download size={20} />
-              <span>Resume</span>
+              <span>Download CV</span>
             </a>
           </div>
 
@@ -133,13 +134,22 @@ const Hero = () => {
               <Github size={24} />
             </a>
             <a
-              href="#" // UPDATE: Add LinkedIn profile URL
+              href="https://www.linkedin.com/in/kanisa-pradhan-077299325/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dark-400 hover:text-primary-400 transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={24} />
+            </a>
+            <a
+              href="https://blogbykanu.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-400 hover:text-primary-400 transition-colors"
+              aria-label="Blog"
+            >
+              <BookOpen size={24} />
             </a>
             <a
               href="mailto:kanisapradhan@gmail.com"

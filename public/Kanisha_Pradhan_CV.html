@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kanisha Pradhan - CV</title>
+<style>
+  @page { size: letter; margin: 0.6in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Cambria", "Times New Roman", serif;
+    color: #111;
+    max-width: 8.2in;
+    margin: 0 auto;
+    padding: 0.5in 0.6in;
+    line-height: 1.35;
+    font-size: 10.6pt;
+  }
+  header { text-align: center; margin-bottom: 14px; }
+  h1.name {
+    font-size: 24pt;
+    letter-spacing: 0.5px;
+    margin: 0 0 4px 0;
+    font-weight: 700;
+  }
+  .contact {
+    font-size: 9.6pt;
+  }
+  .contact a { color: #111; text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+  .contact span.sep { margin: 0 6px; color: #555; }
+
+  h2.section {
+    font-variant: small-caps;
+    font-size: 13pt;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #111;
+    margin: 16px 0 6px 0;
+    padding-bottom: 1px;
+  }
+
+  .entry { margin-bottom: 8px; }
+  .entry-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .entry-title { font-weight: 700; }
+  .entry-date { font-style: italic; white-space: nowrap; }
+  .entry-subrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-style: italic;
+    margin-bottom: 2px;
+  }
+  .entry-role { font-style: italic; }
+  .entry-tags { font-style: italic; }
+
+  ul.bullets {
+    margin: 2px 0 0 0;
+    padding-left: 18px;
+  }
+  ul.bullets li { margin-bottom: 1px; }
+
+  .note {
+    font-size: 9.4pt;
+    color: #444;
+    font-style: italic;
+  }
+
+  .skills-row { margin-bottom: 3px; }
+  .skills-row .label { font-weight: 700; }
+
+  @media print {
+    body { padding: 0; }
+    a { color: #111 !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="name">Kanisha Pradhan</h1>
+  <div class="contact">
+    17746506
+    <span class="sep">|</span>
+    <a href="mailto:kanisapradhan@gmail.com">kanisapradhan@gmail.com</a>
+    <span class="sep">|</span>
+    <a href="https://www.linkedin.com/in/kanisa-pradhan-077299325/">linkedin.com/in/kanisa-pradhan</a>
+    <span class="sep">|</span>
+    <a href="https://github.com/Kanishapradhan13">github.com/Kanishapradhan13</a>
+    <span class="sep">|</span>
+    <a href="https://blogbykanu.vercel.app">blog</a>
+    <span class="sep">|</span>
+    <a href="#">portfolio</a>
+  </div>
+</header>
+
+<h2 class="section">Education</h2>
+<div class="entry">
+  <div class="entry-row">
+    <span class="entry-title">College of Science and Technology, Royal University of Bhutan</span>
+    <span class="entry-date">4th Year</span>
+  </div>
+  <div class="entry-subrow">
+    <span>Bachelor of Engineering in Software Engineering</span>
+    <span></span>
+  </div>
+  <div class="note">Prior education: Pelkhil School (Class XII)</div>
+</div>
+
+<h2 class="section">Experience</h2>
+
+<div class="entry">
+  <div class="entry-row">
+    <span class="entry-title">DHI Innotech (Drive)</span>
+    <span class="entry-date">2nd Year, One Semester</span>
+  </div>
+  <div class="entry-subrow">
+    <span class="entry-role">Software Engineering Intern</span>
+  </div>
+  <ul class="bullets">
+    <li>Completed a full-semester internship contributing to live software development work, the second internship of the candidate's academic career</li>
+    <li>Gained hands-on exposure to industry development practices and team-based software delivery</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-row">
+    <span class="entry-title">College of Science and Technology</span>
+    <span class="entry-date">2026</span>
+  </div>
+  <div class="entry-subrow">
+    <span class="entry-role">Software Engineering Mentor</span>
+  </div>
+  <ul class="bullets">
+    <li>Mentored first-year software engineering students on programming fundamentals in Python and C</li>
+    <li>Delivered instruction on Git/GitHub workflows, Figma for UI/UX design, project management practices, and the Software Development Life Cycle (SDLC)</li>
+  </ul>
+</div>
+
+<h2 class="section">Projects</h2>
+
+<div class="entry">
+  <div class="entry-row">
+    <span class="entry-title">DrukNest</span>
+    <span class="entry-tags">React, Node.js</span>
+  </div>
+  <div class="entry-subrow"><span class="entry-role">Full-Stack Developer</span></div>
+  <ul class="bullets">
+    <li>Built Bhutan's first dedicated digital rental marketplace, a mobile-responsive web platform connecting landlords and tenants across Thimphu, Paro, and Phuentsholing</li>
+    <li>Designed the platform to address gaps in the informal rental market, including the lack of verified listings, standardized leases, and secure payment options</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-row">
+    <span class="entry-title">Auction Management Service</span>
+    <span class="entry-tags">Microservices Architecture</span>
+  </div>
+  <div class="entry-subrow"><span class="entry-role">Full-Stack Developer</span></div>
+  <ul class="bullets">
+    <li>Built a full-stack auction platform for land and vehicle auctions, with dedicated, uniquely coded bidding rooms and real-time participant tracking</li>
+    <li>Implemented a DRAFT → ACTIVE → CLOSED status workflow, with search and filter by keyword and status, and a seller dashboard for managing auctions</li>
+    <li>Architected the system using microservices designed to integrate with separate User, Bidding, and Notification services</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-row">
+    <span class="entry-title">DrukMatch</span>
+    <span class="entry-tags">React Native/Expo, WebSockets, JWT</span>
+  </div>
+  <ul class="bullets">
+    <li>Built a full-stack dating application designed specifically for a Bhutanese cultural context</li>
+    <li>Implemented JWT-based authentication, profile management (up to 6 photos, bio, interests, preferences), and swipe-based matching with intelligent match discovery</li>
+    <li>Developed real-time chat with WebSockets, including typing indicators and read receipts</li>
+    <li>Localized the experience with all 20 Dzongkhags, zodiac signs, and bilingual support</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-row">
+    <span class="entry-title">CocoCart (now 1MinuteShop)</span>
+    <span class="entry-tags"></span>
+  </div>
+  <div class="entry-subrow"><span class="entry-role">UI/UX Designer (early-stage)</span></div>
+  <ul class="bullets">
+    <li>Designed early UI/UX concepts for an e-commerce website builder that generates individualized storefronts for shop owners, with product management, order management, and sales analytics</li>
+    <li>Contributed to the design of customer-facing features, including a scratch-voucher reward and a loyalty discount after six orders</li>
+  </ul>
+  <div class="note">Contributed during the project's initial design phase only, prior to production development</div>
+</div>
+
+<h2 class="section">Leadership &amp; Achievements</h2>
+
+<div class="entry">
+  <div class="entry-row">
+    <span class="entry-title">GovTech Hackathon 2025</span>
+    <span class="entry-date">GCIT</span>
+  </div>
+  <div class="entry-subrow"><span class="entry-role">Participant</span></div>
+</div>
+
+<div class="entry">
+  <div class="entry-row">
+    <span class="entry-title">Business Idea Competition</span>
+    <span class="entry-date">Gedu College</span>
+  </div>
+  <div class="entry-subrow"><span class="entry-role">Winner (College Level), Competitor (Inter-College)</span></div>
+  <ul class="bullets">
+    <li>Won the college-level round with the "1MinuteShop" business concept and advanced to the inter-college competition held at Gedu College</li>
+  </ul>
+</div>
+
+<h2 class="section">Technical Skills</h2>
+<div class="skills-row"><span class="label">Languages:</span> Python, C#, JavaScript, TypeScript, Go</div>
+<div class="skills-row"><span class="label">Frameworks:</span> React, Next.js, FastAPI, Express, Hono, Expo</div>
+<div class="skills-row"><span class="label">Tools:</span> Git, Docker, AWS, Kubernetes, Jenkins</div>
+<div class="skills-row"><span class="label">Databases:</span> PostgreSQL, MongoDB, Prisma ORM</div>
+
+</body>
+</html>

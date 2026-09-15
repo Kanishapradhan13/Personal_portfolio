@@ -1,4 +1,4 @@
-import { Award, BookOpen, Briefcase, Target } from 'lucide-react';
+import { Award, BookOpen, Briefcase, Target, Users } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const About = () => {
@@ -8,22 +8,22 @@ const About = () => {
     {
       icon: Briefcase,
       title: 'DHI Innotech Intern',
-      description: 'Gained hands-on experience in software development and project implementation',
+      description: 'Full-semester internship contributing to live software development at Drive, DHI Innotech',
     },
     {
       icon: BookOpen,
-      title: 'Software Engineering Student',
-      description: 'Currently pursuing degree at College of Science and Technology (Class of 2027)',
+      title: '4th Year SE Student',
+      description: 'Pursuing Bachelor of Engineering in Software Engineering at CST, Royal University of Bhutan',
     },
     {
       icon: Target,
-      title: 'Full Stack Development',
-      description: 'Experienced in building end-to-end web applications with modern technologies',
+      title: 'Full-Stack Builder',
+      description: 'Built real-world products including Bhutan\'s first digital rental marketplace, DrukNest',
     },
     {
-      icon: Award,
-      title: 'Security Focused',
-      description: 'Specialized in cybersecurity and DevSecOps practices',
+      icon: Users,
+      title: 'SE Mentor (2026)',
+      description: 'Mentored first-year students on Python, C, Git, Figma, and the Software Development Life Cycle',
     },
   ];
 
@@ -43,21 +43,12 @@ const About = () => {
             {/* Photo Section */}
             <div className="order-2 lg:order-1">
               <div className="relative group">
-                {/* Placeholder for profile photo */}
-                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 aspect-square flex items-center justify-center border-2 border-dark-800 group-hover:border-primary-500/50 transition-all duration-300">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-6xl font-bold text-white">
-                      K
-                    </div>
-                    <p className="text-dark-400 text-sm">
-                      <img
-                        src="/profile.jpg"
-                        alt="Kanisha Pradhan"
-                        className="w-full h-full object-cover rounded-2xl"
-                      /><br />
-                      Recommended size: 800x800px
-                    </p>
-                  </div>
+                <div className="relative overflow-hidden rounded-2xl border-2 border-dark-800 group-hover:border-primary-500/50 transition-all duration-300 aspect-square">
+                  <img
+                    src="/profile.jpg"
+                    alt="Kanisha Pradhan"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 {/* Decorative Elements */}
                 <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary-500/20 rounded-lg -z-10 group-hover:scale-110 transition-transform"></div>
@@ -72,20 +63,22 @@ const About = () => {
               </h3>
 
               <p className="text-dark-300 text-lg leading-relaxed">
-                I'm a software engineering student with a strong passion for creating impactful digital experiences.
-                With 4 years of hands-on experience, I've developed a diverse skill set spanning full-stack development,
-                UI/UX design, cybersecurity, and project management.
+                I'm a 4th-year Software Engineering student at the College of Science and Technology, Royal University
+                of Bhutan. I build full-stack products that solve real problems — from <strong className="text-dark-200">DrukNest</strong>, Bhutan's first
+                dedicated digital rental marketplace, to <strong className="text-dark-200">DrukMatch</strong>, a culturally localised dating app with
+                real-time chat.
               </p>
 
               <p className="text-dark-300 text-lg leading-relaxed">
-                Currently pursuing my degree at the College of Science and Technology (graduating 2027), I combine
-                academic knowledge with practical experience gained from my internship at DHI Innotech. I'm particularly
-                interested in DevSecOps practices and building secure, scalable applications.
+                I completed a full-semester internship at DHI Innotech (Drive), where I contributed to live software
+                delivery. In 2026 I mentored first-year SE students on programming fundamentals, Git, Figma, and the
+                SDLC — and competed in (and won at college level) the <strong className="text-dark-200">1MinuteShop</strong> Business Idea Competition.
               </p>
 
               <p className="text-dark-300 text-lg leading-relaxed">
-                When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and
-                staying updated with the latest trends in software development and cybersecurity.
+                Outside of code I write about tech on my <a href="https://blogbykanu.vercel.app" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:underline">blog</a> and
+                stay curious about microservices architecture, DevOps tooling, and building products that genuinely
+                matter to the people who use them.
               </p>
 
               <div className="pt-4">

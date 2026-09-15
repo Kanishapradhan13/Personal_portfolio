@@ -185,7 +185,7 @@ const Contact = () => {
                     <Github size={20} />
                   </a>
                   <a
-                    href="#" // UPDATE: Add LinkedIn profile URL
+                    href="https://www.linkedin.com/in/kanisa-pradhan-077299325/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg bg-dark-800 border border-dark-700 flex items-center justify-center text-dark-400 hover:text-primary-400 hover:border-primary-500/50 transition-all hover:scale-110"

@@ -37,7 +37,7 @@ const Footer = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: '#', // UPDATE: Add LinkedIn profile URL
+      href: 'https://www.linkedin.com/in/kanisa-pradhan-077299325/',
     },
     {
       name: 'Email',

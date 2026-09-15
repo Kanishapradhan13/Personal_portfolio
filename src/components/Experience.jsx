@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Calendar } from 'lucide-react';
+import { Briefcase, GraduationCap, Calendar, Trophy, Users } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Experience = () => {
@@ -8,40 +8,84 @@ const Experience = () => {
     {
       id: 1,
       type: 'work',
-      icon: Briefcase,
-      title: 'Software Development Intern',
-      organization: 'DHI Innotech',
-      location: 'Thimphu, Bhutan',
-      period: '3 Months',
-      date: '2024', // UPDATE: Add specific dates
-      description: 'Gained hands-on experience in software development, working on real-world projects and collaborating with experienced developers.',
+      icon: Users,
+      title: 'Software Engineering Mentor',
+      organization: 'College of Science and Technology',
+      location: 'Phuentsholing, Bhutan',
+      period: '2026',
+      date: '2026',
+      description:
+        'Mentored first-year software engineering students, delivering instruction across core tools and practices used throughout the degree.',
       achievements: [
-        'Contributed to the development of web applications using modern technologies',
-        'Participated in code reviews and implemented best practices',
-        'Learned agile methodologies and team collaboration tools',
-        'Worked on debugging and optimizing existing codebases',
+        'Taught programming fundamentals in Python and C to incoming SE students',
+        'Delivered hands-on sessions on Git/GitHub workflows and collaborative development',
+        'Introduced Figma for UI/UX design and wireframing',
+        'Covered project management practices and the Software Development Life Cycle (SDLC)',
+      ],
+      color: 'from-violet-500 to-purple-500',
+    },
+    {
+      id: 2,
+      type: 'work',
+      icon: Briefcase,
+      title: 'Software Engineering Intern',
+      organization: 'DHI Innotech (Drive)',
+      location: 'Thimphu, Bhutan',
+      period: 'One Semester',
+      date: '2nd Year',
+      description:
+        'Completed a full-semester internship contributing to live software development work — the second internship of the candidate\'s academic career.',
+      achievements: [
+        'Contributed to live software delivery alongside professional development teams',
+        'Gained hands-on exposure to industry development practices and workflows',
+        'Applied academic knowledge to real-world, production-grade software challenges',
+        'Developed skills in team-based software delivery and agile collaboration',
       ],
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      id: 2,
+      id: 3,
       type: 'education',
       icon: GraduationCap,
-      title: 'Bachelor in Software Engineering',
-      organization: 'College of Science and Technology',
+      title: 'Bachelor of Engineering in Software Engineering',
+      organization: 'College of Science and Technology, Royal University of Bhutan',
       location: 'Phuentsholing, Bhutan',
-      period: 'Expected 2027',
-      date: '2023 - 2027',
-      description: 'Pursuing comprehensive education in software engineering, covering fundamental and advanced topics in computer science and software development.',
+      period: '4th Year',
+      date: '2023 – Present',
+      description:
+        'Pursuing a comprehensive software engineering degree covering full-stack development, systems design, cybersecurity, and project management.',
       achievements: [
-        'Studying advanced algorithms, data structures, and software architecture',
-        'Hands-on projects in web development, mobile apps, and system design',
-        'Learning cybersecurity principles and secure coding practices',
-        'Participating in hackathons and coding competitions',
+        'Core subjects: algorithms, data structures, software architecture, and systems programming',
+        'Practical work in web development, mobile applications, and microservices',
+        'Prior education at Pelkhil School (Class XII)',
+        'Participated in GovTech Hackathon 2025 at GCIT',
       ],
       color: 'from-purple-500 to-pink-500',
     },
-    // UPDATE: Add more experiences, internships, or certifications as needed
+  ];
+
+  const achievements = [
+    {
+      emoji: '🏆',
+      title: 'Business Idea Competition — Winner',
+      issuer: 'College Level · Competitor at Gedu College',
+      year: '2025',
+      description: 'Won the college-level round with the "1MinuteShop" concept and advanced to the inter-college competition.',
+    },
+    {
+      emoji: '⚙️',
+      title: 'GovTech Hackathon 2025',
+      issuer: 'GCIT',
+      year: '2025',
+      description: 'Participated in the national government technology hackathon organised by GCIT.',
+    },
+    {
+      emoji: '✍️',
+      title: 'Tech Blog — blogbykanu',
+      issuer: 'blogbykanu.vercel.app',
+      year: 'Ongoing',
+      description: 'Publishing articles on software development, tooling, and lessons from building real products.',
+    },
   ];
 
   return (
@@ -125,44 +169,26 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Certifications Section (Optional - Update as needed) */}
+          {/* Achievements Section */}
           <div className="mt-20">
             <h3 className="text-2xl font-bold text-center mb-8 text-dark-100">
-              Certifications & <span className="gradient-text">Achievements</span>
+              Achievements & <span className="gradient-text">Recognition</span>
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: 'Full Stack Development',
-                  issuer: 'Online Course Platform',
-                  year: '2024',
-                },
-                {
-                  title: 'Cybersecurity Fundamentals',
-                  issuer: 'Security Training Platform',
-                  year: '2023',
-                },
-                {
-                  title: 'React Advanced Patterns',
-                  issuer: 'Frontend Masters',
-                  year: '2024',
-                },
-              ].map((cert, index) => (
+              {achievements.map((item, index) => (
                 <div
                   key={index}
                   className="card card-hover text-center"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="text-4xl mb-3">🏆</div>
-                  <h4 className="text-lg font-semibold text-dark-100 mb-2">{cert.title}</h4>
-                  <p className="text-dark-400 text-sm mb-1">{cert.issuer}</p>
-                  <p className="text-primary-400 text-sm font-medium">{cert.year}</p>
+                  <div className="text-4xl mb-3">{item.emoji}</div>
+                  <h4 className="text-lg font-semibold text-dark-100 mb-1">{item.title}</h4>
+                  <p className="text-dark-400 text-sm mb-1">{item.issuer}</p>
+                  <p className="text-primary-400 text-sm font-medium mb-2">{item.year}</p>
+                  <p className="text-dark-500 text-xs">{item.description}</p>
                 </div>
               ))}
             </div>
-            <p className="text-center text-dark-500 text-sm mt-6">
-              [PLACEHOLDER: Update with your actual certifications and achievements]
-            </p>
           </div>
         </div>
       </div>

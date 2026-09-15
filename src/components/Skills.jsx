@@ -1,4 +1,4 @@
-import { Code2, Database, Layout, Lock, Server, Wrench } from 'lucide-react';
+import { Code2, Database, Layout, Server, Wrench, Palette } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Skills = () => {
@@ -6,77 +6,84 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      category: 'Frontend Development',
-      icon: Layout,
+      category: 'Languages',
+      icon: Code2,
       color: 'from-blue-500 to-cyan-500',
       skills: [
-        { name: 'React', level: 90 },
+        { name: 'JavaScript', level: 90 },
         { name: 'TypeScript', level: 85 },
-        { name: 'Tailwind CSS', level: 95 },
-        { name: 'Next.js', level: 80 },
-        { name: 'HTML/CSS', level: 95 },
+        { name: 'Python', level: 80 },
+        { name: 'C#', level: 70 },
+        { name: 'Go', level: 65 },
       ],
     },
     {
-      category: 'Backend Development',
+      category: 'Frontend & Mobile',
+      icon: Layout,
+      color: 'from-violet-500 to-purple-500',
+      skills: [
+        { name: 'React', level: 90 },
+        { name: 'Next.js', level: 80 },
+        { name: 'React Native / Expo', level: 80 },
+        { name: 'HTML / CSS', level: 95 },
+        { name: 'Tailwind CSS', level: 90 },
+      ],
+    },
+    {
+      category: 'Backend & APIs',
       icon: Server,
       color: 'from-green-500 to-emerald-500',
       skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Express', level: 85 },
-        { name: 'Python', level: 80 },
+        { name: 'Node.js / Express', level: 85 },
+        { name: 'FastAPI', level: 75 },
+        { name: 'Hono', level: 70 },
         { name: 'REST APIs', level: 90 },
-        { name: 'GraphQL', level: 75 },
+        { name: 'WebSockets', level: 80 },
       ],
     },
     {
-      category: 'Database & Storage',
+      category: 'Databases & ORM',
       icon: Database,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-red-500',
       skills: [
-        { name: 'MongoDB', level: 85 },
         { name: 'PostgreSQL', level: 80 },
-        { name: 'MySQL', level: 80 },
-        { name: 'Redis', level: 75 },
-        { name: 'Firebase', level: 85 },
+        { name: 'MongoDB', level: 80 },
+        { name: 'Prisma ORM', level: 80 },
+        { name: 'JWT / Auth', level: 85 },
       ],
     },
     {
       category: 'DevOps & Tools',
       icon: Wrench,
-      color: 'from-orange-500 to-red-500',
-      skills: [
-        { name: 'Git', level: 90 },
-        { name: 'Docker', level: 80 },
-        { name: 'CI/CD', level: 75 },
-        { name: 'AWS', level: 70 },
-        { name: 'Linux', level: 85 },
-      ],
-    },
-    {
-      category: 'Security & Testing',
-      icon: Lock,
       color: 'from-yellow-500 to-orange-500',
       skills: [
-        { name: 'Cybersecurity', level: 85 },
-        { name: 'DevSecOps', level: 80 },
-        { name: 'Jest/Testing', level: 80 },
-        { name: 'OWASP', level: 75 },
-        { name: 'Penetration Testing', level: 70 },
+        { name: 'Git / GitHub', level: 90 },
+        { name: 'Docker', level: 75 },
+        { name: 'AWS', level: 70 },
+        { name: 'Kubernetes', level: 65 },
+        { name: 'Jenkins (CI/CD)', level: 65 },
       ],
     },
     {
-      category: 'Other Skills',
-      icon: Code2,
+      category: 'Design & Other',
+      icon: Palette,
       color: 'from-pink-500 to-rose-500',
       skills: [
-        { name: 'UI/UX Design', level: 85 },
+        { name: 'Figma / UI/UX', level: 85 },
         { name: 'Project Management', level: 80 },
-        { name: 'Agile/Scrum', level: 85 },
-        { name: 'Problem Solving', level: 90 },
-        { name: 'Team Collaboration', level: 90 },
+        { name: 'Agile / SDLC', level: 85 },
+        { name: 'Microservices', level: 75 },
+        { name: 'Team Mentoring', level: 85 },
       ],
     },
+  ];
+
+  const techTags = [
+    'JavaScript', 'TypeScript', 'Python', 'C#', 'Go',
+    'React', 'Next.js', 'Expo', 'FastAPI', 'Express', 'Hono',
+    'PostgreSQL', 'MongoDB', 'Prisma ORM',
+    'Docker', 'AWS', 'Kubernetes', 'Jenkins',
+    'Git', 'WebSockets', 'JWT', 'Figma',
   ];
 
   return (
@@ -90,7 +97,7 @@ const Skills = () => {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full mb-4"></div>
             <p className="text-dark-400 text-lg max-w-2xl mx-auto">
-              A comprehensive toolkit of technologies and skills I've mastered throughout my journey as a developer.
+              A toolkit built across full-stack development, mobile, DevOps, and design.
             </p>
           </div>
 
@@ -137,17 +144,13 @@ const Skills = () => {
             })}
           </div>
 
-          {/* Additional Skills Tags */}
+          {/* Technology Tags */}
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-center mb-8 text-dark-100">
-              Additional <span className="gradient-text">Technologies</span>
+              Full <span className="gradient-text">Tech Stack</span>
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {[
-                'JavaScript', 'React Native', 'Vue.js', 'Angular', 'Webpack', 'Vite',
-                'Sass/SCSS', 'Material-UI', 'Bootstrap', 'Redux', 'Socket.io', 'JWT',
-                'OAuth', 'Postman', 'Figma', 'Adobe XD', 'Jira', 'Confluence',
-              ].map((tech, index) => (
+              {techTags.map((tech, index) => (
                 <span
                   key={index}
                   className="px-4 py-2 bg-dark-800/50 border border-dark-700 rounded-lg text-sm font-medium text-dark-300 hover:border-primary-500/50 hover:text-primary-400 transition-all cursor-default"

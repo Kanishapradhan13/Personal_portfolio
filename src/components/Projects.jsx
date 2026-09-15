@@ -1,73 +1,77 @@
-import { ExternalLink, Github, Gavel, ShoppingBag, Shield, Zap } from 'lucide-react';
+import { ExternalLink, Github, Home, Gavel, Heart, ShoppingBag } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Projects = () => {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
-  // UPDATE: Add your actual projects here
   const projects = [
     {
       id: 1,
-      title: 'Online Auction Platform',
-      description: 'A comprehensive auction platform featuring real-time bidding, secure payment integration, and user authentication. Built with modern web technologies to provide a seamless auction experience.',
-      technologies: ['React', 'Node.js', 'Supabase', 'Socket.io', 'clerk', 'JWT'],
+      title: 'DrukNest',
+      subtitle: "Bhutan's first digital rental marketplace",
+      description:
+        "Built Bhutan's first dedicated digital rental marketplace — a mobile-responsive web platform connecting landlords and tenants across Thimphu, Paro, and Phuentsholing. Designed to address the absence of verified listings, standardised leases, and secure payment options in the informal rental market.",
+      technologies: ['React', 'Node.js'],
       features: [
-        'Real-time bidding system with WebSocket',
-        'Advanced search and filtering',
+        "Mobile-responsive platform covering Bhutan's major cities",
+        'Verified listings system addressing gaps in the informal rental market',
+        'Standardised lease management and secure payment integration',
       ],
-      icon: Gavel,
-      color: 'from-blue-500 to-cyan-500',
-      github: '#', // UPDATE: Add GitHub repository link
-      demo: '#', // UPDATE: Add live demo link
-      image: 'auction-platform.jpg', // UPDATE: Add project screenshot
+      icon: Home,
+      color: 'from-emerald-500 to-teal-500',
+      github: 'https://github.com/Kanishapradhan13',
+      demo: null,
     },
     {
       id: 2,
-      title: 'E-Commerce Store',
-      description: 'Full-featured e-commerce platform with product management, shopping cart, order tracking, and admin dashboard. Implements modern UI/UX patterns for optimal user experience.',
-      technologies: ['React', 'Express', 'PostgreSQL', 'Redux', 'Tailwind CSS'],
+      title: 'Auction Management Service',
+      subtitle: 'Microservices-based auction platform',
+      description:
+        'A full-stack auction platform for land and vehicle auctions, featuring dedicated bidding rooms with unique codes and real-time participant tracking. Implements a DRAFT → ACTIVE → CLOSED status workflow with search, filter, and a seller dashboard.',
+      technologies: ['Microservices', 'React', 'Node.js', 'WebSockets'],
       features: [
-        'Product catalog with advanced filtering',
-        'Shopping cart and checkout flow',
-        'Admin dashboard for inventory management',
+        'Dedicated, uniquely coded bidding rooms with real-time participant tracking',
+        'DRAFT → ACTIVE → CLOSED auction lifecycle with seller dashboard',
+        'Search and filter by keyword and status; microservice architecture for User, Bidding, and Notification services',
       ],
-      icon: ShoppingBag,
-      color: 'from-purple-500 to-pink-500',
-      github: '#', // UPDATE: Add GitHub repository link
-      demo: '#', // UPDATE: Add live demo link
-      image: 'ecommerce-store.jpg', // UPDATE: Add project screenshot
+      icon: Gavel,
+      color: 'from-blue-500 to-indigo-500',
+      github: 'https://github.com/Kanishapradhan13',
+      demo: null,
     },
     {
       id: 3,
-      title: 'Security Monitoring Dashboard',
-      description: 'A comprehensive security monitoring solution with real-time threat detection, vulnerability scanning, and compliance reporting. Designed for DevSecOps workflows.',
-      technologies: ['React', 'Python', 'FastAPI', 'Docker', 'PostgreSQL'],
+      title: 'DrukMatch',
+      subtitle: 'Bhutanese cultural dating app',
+      description:
+        'A full-stack mobile dating application built specifically for a Bhutanese cultural context, with JWT authentication, swipe-based matching, and real-time chat with WebSocket support.',
+      technologies: ['React Native', 'Expo', 'WebSockets', 'JWT'],
       features: [
-        'Real-time security alerts and notifications',
-        'Vulnerability assessment and reporting',
-        'Integration with CI/CD pipelines',
+        'JWT authentication, profile management (up to 6 photos, bio, interests, preferences)',
+        'Swipe-based matching with intelligent discovery; real-time chat with typing indicators and read receipts',
+        'Localised with all 20 Dzongkhags, zodiac signs, and bilingual (Dzongkha/English) support',
       ],
-      icon: Shield,
-      color: 'from-green-500 to-emerald-500',
-      github: '#', // UPDATE: Add GitHub repository link
-      demo: '#', // UPDATE: Add live demo link
-      image: 'security-dashboard.jpg', // UPDATE: Add project screenshot
+      icon: Heart,
+      color: 'from-rose-500 to-pink-500',
+      github: 'https://github.com/Kanishapradhan13',
+      demo: null,
     },
     {
       id: 4,
-      title: 'Performance Analytics Tool',
-      description: 'Web performance monitoring and analytics platform that tracks key metrics, identifies bottlenecks, and provides actionable insights for optimization.',
-      technologies: ['React', 'TypeScript', 'Node.js', 'InfluxDB', 'Chart.js'],
+      title: 'CocoCart (now 1MinuteShop)',
+      subtitle: 'E-commerce website builder · UI/UX Design',
+      description:
+        'Designed early UI/UX concepts for an e-commerce website builder that generates individualised storefronts for shop owners. Contributed product management, order management, and sales analytics flows — plus a scratch-voucher reward and loyalty discount system.',
+      technologies: ['Figma', 'UI/UX Design'],
       features: [
-        'Real-time performance metrics tracking',
-        'Custom alerts and notifications',
-        'Detailed analytics and reporting',
+        'Individualised storefronts with product and order management, and sales analytics',
+        'Scratch-voucher reward mechanic and loyalty discount after six orders',
+        'Business concept behind the Business Idea Competition win (College Level, 2025)',
       ],
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500',
-      github: '#', // UPDATE: Add GitHub repository link
-      demo: '#', // UPDATE: Add live demo link
-      image: 'analytics-tool.jpg', // UPDATE: Add project screenshot
+      icon: ShoppingBag,
+      color: 'from-amber-500 to-orange-500',
+      github: 'https://github.com/Kanishapradhan13',
+      demo: null,
     },
   ];
 
@@ -82,7 +86,7 @@ const Projects = () => {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full mb-4"></div>
             <p className="text-dark-400 text-lg max-w-2xl mx-auto">
-              A showcase of my recent work, demonstrating expertise in full-stack development, security, and modern web technologies.
+              Real products I've built — from Bhutan's first rental marketplace to a culturally localised dating app.
             </p>
           </div>
 
@@ -93,74 +97,74 @@ const Projects = () => {
               return (
                 <div
                   key={project.id}
-                  className="card card-hover group"
+                  className="card card-hover group flex flex-col"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {/* Project Icon/Image Placeholder */}
-                  <div className={`relative h-48 rounded-lg bg-gradient-to-br ${project.color} mb-6 flex items-center justify-center overflow-hidden`}>
-                    <div className="absolute inset-0 bg-dark-950/50 backdrop-blur-sm group-hover:bg-dark-950/30 transition-all"></div>
-                    <Icon className="relative z-10 text-white" size={64} />
-                    <div className="absolute bottom-2 left-2 right-2 text-center">
-                      <p className="text-white/70 text-xs">
-                        [PLACEHOLDER: Add project screenshot]
-                      </p>
-                    </div>
+                  {/* Project Icon Banner */}
+                  <div className={`relative h-40 rounded-lg bg-gradient-to-br ${project.color} mb-6 flex items-center justify-center overflow-hidden`}>
+                    <div className="absolute inset-0 bg-dark-950/40 backdrop-blur-sm group-hover:bg-dark-950/20 transition-all"></div>
+                    <Icon className="relative z-10 text-white" size={56} />
                   </div>
 
                   {/* Project Content */}
-                  <h3 className="text-2xl font-bold text-dark-100 mb-3 group-hover:gradient-text transition-all">
-                    {project.title}
-                  </h3>
+                  <div className="flex flex-col flex-1">
+                    <h3 className="text-2xl font-bold text-dark-100 mb-1 group-hover:gradient-text transition-all">
+                      {project.title}
+                    </h3>
+                    <p className="text-primary-400 text-sm font-medium mb-3">{project.subtitle}</p>
 
-                  <p className="text-dark-300 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
+                    <p className="text-dark-300 mb-4 leading-relaxed text-sm">
+                      {project.description}
+                    </p>
 
-                  {/* Key Features */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-dark-200 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {project.features.map((feature, idx) => (
-                        <li key={idx} className="text-dark-400 text-sm flex items-start">
-                          <span className="text-primary-400 mr-2">•</span>
-                          {feature}
-                        </li>
+                    {/* Key Features */}
+                    <div className="mb-4 flex-1">
+                      <h4 className="text-sm font-semibold text-dark-200 mb-2">Key Features:</h4>
+                      <ul className="space-y-1">
+                        {project.features.map((feature, idx) => (
+                          <li key={idx} className="text-dark-400 text-sm flex items-start">
+                            <span className="text-primary-400 mr-2 mt-0.5 flex-shrink-0">•</span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.technologies.map((tech, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 bg-dark-800/50 border border-dark-700 rounded-full text-xs font-medium text-primary-400 group-hover:border-primary-500/50 transition-all"
+                        >
+                          {tech}
+                        </span>
                       ))}
-                    </ul>
-                  </div>
+                    </div>
 
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 bg-dark-800/50 border border-dark-700 rounded-full text-xs font-medium text-primary-400 group-hover:border-primary-500/50 transition-all"
+                    {/* Links */}
+                    <div className="flex space-x-4">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-dark-300 hover:text-primary-400 transition-colors group/link"
                       >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex space-x-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-dark-300 hover:text-primary-400 transition-colors group/link"
-                    >
-                      <Github size={20} className="group-hover/link:scale-110 transition-transform" />
-                      <span className="text-sm font-medium">Code</span>
-                    </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-dark-300 hover:text-primary-400 transition-colors group/link"
-                    >
-                      <ExternalLink size={20} className="group-hover/link:scale-110 transition-transform" />
-                      <span className="text-sm font-medium">Live Demo</span>
-                    </a>
+                        <Github size={20} className="group-hover/link:scale-110 transition-transform" />
+                        <span className="text-sm font-medium">GitHub</span>
+                      </a>
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center space-x-2 text-dark-300 hover:text-primary-400 transition-colors group/link"
+                        >
+                          <ExternalLink size={20} className="group-hover/link:scale-110 transition-transform" />
+                          <span className="text-sm font-medium">Live Demo</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               );
